@@ -31,5 +31,37 @@
             tope++;
 
         }
+
+        public void Eliminar()
+        {
+            if (EsVacio())
+            {
+                throw new Exception("El arreglo esta vacio");
+            }
+            tope--;
+            arreglo[tope] = string.Empty;
+        }
+
+        public string Imprimir()
+        {
+            string dato = string.Empty;
+            if (EsVacio())
+            {
+                return "No hay elementos en el arreglo";
+            }
+            for (int i = 0; i < tope; i++)
+            {
+                if (i > 0)
+                {
+                    dato += "\n";
+
+                }
+                dato += $"[{i}]-{arreglo[i]}";
+
+            }
+            return dato;
+
+
+        }
     }
 }
