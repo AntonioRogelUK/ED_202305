@@ -1,50 +1,30 @@
 ﻿using System.Threading.Channels;
-
+using System;
 try
 {
-    //Arreglos.Pilas pila = new Arreglos.Pilas(5);
-    //pila.Agregar("Edgar");
-    //pila.Agregar("Amaya");
-    //pila.Agregar("Allison");
 
-    //string contenido = pila.Imprimir();
-    //Console.WriteLine(contenido);
-    //Console.WriteLine( "------------" );
-    //pila.Eliminar();
+    Console.WriteLine("EJERCICIO PILAS");
+    Console.WriteLine("------------");
+    Console.Write("Introduce cantidad de elementos para la pila:  ");
+    int elementosPila = Convert.ToInt32(Console.ReadLine());
+    new Listas.Pilas(elementosPila);
 
-    //contenido = pila.Imprimir();
-    //Console.WriteLine(contenido);
-    //Console.WriteLine("------------");
-    //pila.Agregar("Pedro");
-    //contenido = pila.Imprimir();
-    //Console.WriteLine(contenido);
 
-    Arreglos.Colas colas = new Arreglos.Colas(10);
-    colas.Agregar("A");
-    colas.Agregar("B");
-    colas.Agregar("C");
-    colas.Agregar("D");
-    string contenido = colas.Imprimir();
-    Console.WriteLine(contenido);
-    Console.WriteLine(new string('-',10));
-    colas.Eliminar();
-    Console.WriteLine(colas.Imprimir());
-    Console.WriteLine(new string('-', 10));
-    colas.Eliminar();
-    Console.WriteLine(colas.Imprimir());
-    Console.WriteLine(new string('-', 10));
-    colas.Eliminar();
-    Console.WriteLine(colas.Imprimir());
-    Console.WriteLine(new string('-', 10));
-    colas.Eliminar();
-    Console.WriteLine(colas.Imprimir());
+    Console.WriteLine("");
+    Console.WriteLine("EJERCICIO COLAS");
+    Console.WriteLine("------------");
+    Console.Write("Introduce cantidad de elementos para la cola:  ");
+    int elementosCola = Convert.ToInt32(Console.ReadLine());
+    new Listas.Colas(elementosCola);
+
 
 }
-catch (Exception ex) 
+catch (Exception ex)
 {
 
-    Console.WriteLine($"Ocurrió un error:{ex.Message}"); 
+    Console.WriteLine($"Ocurrió un error:{ex.Message}");
 
 
 }
+
 
