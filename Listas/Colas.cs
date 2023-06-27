@@ -32,7 +32,7 @@ namespace Listas
                 throw new Exception("La lista esta vacía");
             }
 
-           lista.RemoveAt(0);
+            lista.Remove();
         }
 
         public string Imprimir()
